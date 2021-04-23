@@ -14,7 +14,7 @@ def generate_secret_number():
         max_value = max_value - 1
     return(secret_number)
 
-def comprobar_resultado(secret_number_to_guess, input_del_usuario, game_in_progress):
+def comprobar_resultado(secret_number_to_guess, input_del_usuario):
     if (input_del_usuario == 'exit'):
         print('Bye, bye')
         game_in_progress = False
@@ -37,4 +37,5 @@ def verificar_cows_and_bulls(secret_number_to_guess, input_del_usuario):
             else:
                 Cows = Cows + 1
     print('Hay ' + str(Bulls) + ' Bulls y ' + str(Cows) + ' Cows')
-    return()
+    game_in_progress = True
+    return(game_in_progress)
