@@ -17,14 +17,14 @@ def generate_secret_number():
 def comprobar_resultado(secret_number_to_guess, input_del_usuario):
     if (input_del_usuario == 'exit'):
         print('Bye, bye')
-        game_in_progress = False
-        return(game_in_progress)
+        #game_in_progress = False
+        return(False)
     else:
         if (int(input_del_usuario) == int(secret_number_to_guess)):
             print('Genial, has ganado')
-            game_in_progress = False
-            return(game_in_progress)
-        else: verificar_cows_and_bulls(secret_number_to_guess, input_del_usuario)
+            #game_in_progress = False
+            return(False)
+        else: return(verificar_cows_and_bulls(secret_number_to_guess, input_del_usuario))
 
 def verificar_cows_and_bulls(secret_number_to_guess, input_del_usuario):
     Bulls = 0
@@ -37,5 +37,5 @@ def verificar_cows_and_bulls(secret_number_to_guess, input_del_usuario):
             else:
                 Cows = Cows + 1
     print('Hay ' + str(Bulls) + ' Bulls y ' + str(Cows) + ' Cows')
-    game_in_progress = True
-    return(game_in_progress)
+    #game_in_progress = True
+    return(True)
